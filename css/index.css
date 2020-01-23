@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/robotoslab/v10/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjojISmb2Rm.ttf) format('truetype');
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -129,39 +136,57 @@ table {
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
+  max-width: 100%;
 }
 html,
 body {
   height: 100%;
   font-size: 62.5%;
-  width: 1000px;
-  margin: 20px auto;
-  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto Slab', serif;
+  line-height: 1.5;
 }
 body {
-  background-image: url(/images/hollywood_banner.jpg);
+  background-image: url(/images/trees.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+.container {
+  width: 1000px;
+  margin: 0px auto;
+  border: 2px solid #8f5858;
+  border-radius: 10px;
+  background-color: rgba(134, 130, 130, 0.6);
+}
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 30px;
 }
 header nav {
   font-size: 2rem;
   display: flex;
   justify-content: flex-end;
-  height: 10px;
+  height: 30px;
   align-items: center;
 }
 header nav a {
   text-decoration: none;
   margin: 20px;
+  color: black;
 }
 .main {
-  height: 400px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #7a7a7a;
-  margin: 30px auto;
+  background-color: rgba(180, 180, 180, 0.7);
+  margin: 0px auto;
+  color: #1a1a1a;
 }
 .main h2 {
   font-size: 4rem;
@@ -177,15 +202,20 @@ header nav a {
 }
 .main button {
   margin: 20px auto;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 4px;
 }
 .middle {
   font-size: 2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 20px auto;
+  background-color: rgba(180, 180, 180, 0.7);
+  color: #1a1a1a;
 }
 .middle .experience {
-  width: 50%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -194,11 +224,15 @@ header nav a {
   font-size: 3rem;
   border-bottom: solid 1px black;
 }
+.middle .experience p {
+  font-size: 1.2rem;
+}
 .middle .skills {
   width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
 }
 .middle .skills h3 {
   font-size: 3rem;
@@ -208,13 +242,15 @@ header nav a {
   font-size: 1.5rem;
   border-bottom: solid 1px grey;
   margin: 0px;
-  padding: 20px;
+  padding: 10px;
 }
 .projects {
   font-size: 2rem;
   display: flex;
   justify-content: space-between;
-  margin: 40px auto;
+  margin: 20px auto;
+  background-color: rgba(180, 180, 180, 0.7);
+  color: #1a1a1a;
 }
 .projects .position {
   width: 35%;
@@ -228,6 +264,10 @@ header nav a {
 .projects .description ul li {
   margin: 40px auto;
 }
+.projects .description ul li a {
+  text-decoration: none;
+  color: #b61212;
+}
 .projects .tech {
   width: 35%;
 }
@@ -236,6 +276,11 @@ header nav a {
 }
 .projects h3 {
   font-size: 2.5rem;
-  background-color: grey;
+  background-color: rgba(134, 130, 130, 0.6);
   border-bottom: 3px solid black;
+}
+footer {
+  font-size: 2rem;
+  text-align: center;
+  color: #1a1a1a;
 }
